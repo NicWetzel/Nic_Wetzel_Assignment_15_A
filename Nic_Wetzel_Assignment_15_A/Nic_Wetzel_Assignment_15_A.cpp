@@ -6,6 +6,8 @@
 
 using namespace std;
 
+
+// Exception classes. Left empty as it is not necessary to have anythin ginside these classes
 class invalidCharacterException
 {
 
@@ -16,11 +18,13 @@ class invalidRangeException
 
 };
 
+// Character function that will use if statements to throw each exception and return the result
 char character(char start, int offset)
 {
 
 }
 
+// Main function that will use a driver to test four different start and offset values using try/catch blocks
 int main()
 {
     cout << character('a', 1) << endl;
