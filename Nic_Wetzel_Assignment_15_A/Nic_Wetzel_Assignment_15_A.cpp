@@ -21,7 +21,19 @@ class invalidRangeException
 // Character function that will use if statements to throw each exception and return the result
 char character(char start, int offset)
 {
+    if (start < 'A' || start > 'Z' && start < 'a' || start > 'z')
+    {
+        throw invalidCharacterException();
+    }
 
+    int result = start + offset;
+
+    if (result < 'A' || result > 'Z' && result < 'a' || result > 'z')
+    {
+        throw invalidRangeException();
+    }
+
+    return result;
 }
 
 // Main function that will use a driver to test four different start and offset values using try/catch blocks
